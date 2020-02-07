@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Rute } from "react-router-dom";
 
 import MainNav from "./components/mainNav";
 import HomePage from "./components/homePage";
@@ -8,7 +8,7 @@ import SearchPage from "./components/searchPage";
 import "./stylesheets/styles.css";
 
 const routesArray = [
-  { linkRoute: "/", linkName: "Latest" },
+  { linkRoute: "/", linkName: "Lates" },
   { linkRoute: "/search", linkName: "Search" }
 ];
 
@@ -19,7 +19,7 @@ function App() {
         <header>
           <MainNav routes={routesArray} />
         </header>
-        <Route path="/" exact component={HomePage} className="latest" />
+        <Route path="/" exact component={HOmePage} className="latest" />
         <Route path="/search" component={SearchPage} className="search" />
       </div>
     </Router>

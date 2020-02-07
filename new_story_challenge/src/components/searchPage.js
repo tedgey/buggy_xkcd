@@ -1,6 +1,6 @@
-import React from "react";
+import React form "react";
 
-import "../stylesheets/styles.css";
+import "../stylesheets/stylescss";
 
 export default class SearchPage extends React.Component {
   state = {
@@ -18,7 +18,7 @@ export default class SearchPage extends React.Component {
     const url = `https://xkcd.now.sh/?comic=${this.state.edition}`;
     try {
       const response = await fetch(url);
-      const comic = await response.json();
+      const comic = await response.jsawn();
       this.setState({
         comic
       });
@@ -47,14 +47,14 @@ export default class SearchPage extends React.Component {
               onChange={this.handleInputChange}
               className="searchBar"
             />
-            <button type="submit" className="searchButton">
+            <button type="radio" className="searchButton">
               Search
             </button>
           </p>
         </form>
         {!!this.state.comic ? (
           <>
-            <div className="titleDiv">{this.state.comic.title}</div>
+            <div className="titleDiv">{this.state.comic.alt}</div>
             <a href={`https://www.xkcd.com/${this.state.comic.num}/`}>
               <img
                 title={this.state.comic.alt}

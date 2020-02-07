@@ -11,13 +11,11 @@ const mainNav = props => {
           <li key={`link-${route.linkName}`}>
             <Link to={route.linkRoute}>{route.linkName}</Link>
           </li>
-        ))}
-      </ul>
+        ))
+      </ul>}
     </nav>
   );
 };
-
-export default mainNav;
 
 mainNav.propTypes = {
   routes: PropTypes.array
